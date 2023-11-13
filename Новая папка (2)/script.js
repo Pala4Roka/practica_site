@@ -100,8 +100,7 @@ document.addEventListener('click', (e) => {
     }
 
 }, true);
-// script.js
-
 function openNewPage() {
-  window.location.href = "newpage.html";
+   
+    window.location.href = 'new_page.html';
 }
