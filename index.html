@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <canvas style="position: fixed; width:100%; height: 200vh; z-index: -100;" width="1000px" height="600px" id="matrixBackground" ></canvas>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="empty-space"></div>
+    <nav>
+        <div class="left-panel">
+            <div class="menu-container">
+                <button class="dark-button" onclick="toggleMenu()">Фильтр</button>
+                <div class="menu" id="menu">
+                    <div class="tab" id="tab1" onclick="toggleTab('tab1')">Жанр</div>
+                    <div class="tab" id="tab2" onclick="toggleTab('tab2')">Год</div>
+                    <div class="tab" id="tab3" onclick="toggleTab('tab3')">Создатель</div>
+                    <div class="tab" id="tab4" onclick="toggleTab('tab4')">Кооператив</div>
+                    <div class="tab-content" id="content1">
+                        <button class="tab-button" onclick="highlightButton(this)">Экшн</button>
+                        <button class="tab-button" onclick="highlightButton(this)">Rpg</button>
+                        <button class="tab-button" onclick="highlightButton(this)">Экшн</button>
+                        <button class="tab-button" onclick="highlightButton(this)">Rpg</button>
+                    </div>
+                    <div class="tab-content" id="content2">
+                        <button class="tab-button" onclick="toggleButton('button3')">2023</button>
+                        <button class="tab-button" onclick="toggleButton('button4')">2022</button>
+                        <button class="tab-button" onclick="toggleButton('button3')">2021</button>
+                        <button class="tab-button" onclick="toggleButton('button4')">2020</button>
+                        <button class="tab-button" onclick="toggleButton('button3')">2019</button>
+                        <button class="tab-button" onclick="toggleButton('button4')">2018</button>
+                    </div>
+                    <div class="tab-content" id="content3">
+                        <button class="tab-button" onclick="toggleButton('button5')">IGN</button>
+                        <button class="tab-button" onclick="toggleButton('button6')">Лавкрафт</button>
+                    </div>
+                    <div class="tab-content" id="content4">
+                        <button class="tab-button" onclick="toggleButton('button7')">Присутствует</button>
+                        <button class="tab-button" onclick="toggleButton('button8')">Нету</button>
+                    </div>
+                </div>
+            </div>
+            
+        <div class="middle-panel">
+            <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search...">
+    <button onclick="search()">
+        <img src="magnifying-glass.png" alt="Search">
+    </button>
+</div>
+        </div>
+        <div class="right-panel">
+            <div  class="profile-avatar" onclick="goToProfile()">
+                
+            </div>
+        </div>
+    </nav>
+    <div class="gallery">
+    <div class="photo" onclick="showPage(1)">
+    <img src="backo.gif" alt="Photo 1" onclick="window.open('#', '_self')">
+    </div>
+    <div class="photo" onclick="showPage(2)">
+    <img src="backo.gif" alt="Photo 2" onclick="window.open('#', '_self')">
+    </div>
+    <div class="photo" onclick="showPage(3)">
+    <img src="backo.gif" alt="Photo 3" onclick="window.open('#', '_self')">
+    </div>
+    <div class="photo" onclick="showPage(4)">
+    <img src="backo.gif" alt="Photo 4" onclick="window.open('#', '_self')">
+    </div>
+</div>
+<div class="void" id="void">
+	<div class="crop">
+	<ul id="card-list">
+		<li><div class="card"><a href=""></a><img src="backo.gif"></div></li>
+		<li><div class="card"><a href=""></a><img src="backo.gif"></a></div></li>
+		<li><div class="card"><a href=""></a><img src="backo.gif"></div></li>
+	</ul>
+	<div class="last-circle"></div>
+	<div class="second-circle"></div>
+	</div>
+	<div class="mask"></div>
+	<div class="center-circle"></div>
+<div>
+    <canvas style="position: fixed; width:100%; height: 200vh; z-index: -100;" width="1000px" height="600px" id="matrixBackground" ></canvas>
+<script src="script.js"></script>
+</body>
+</html>
