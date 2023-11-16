@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <canvas style="position: fixed; width:100%; height: 200vh; z-index: -100;" width="1000px" height="600px" id="matrixBackground" ></canvas>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="empty-space"></div>
+<nav>
+    <div class="left-panel">
+    <div class="menu-container">
+        <button class="dark-button" onclick="toggleMenu()">Фильтры</button>
+        <div class="menu" id="menu">
+        <div class="tab" onclick="toggleTab('tab1')">Жанр</div>
+        <div class="tab" onclick="toggleTab('tab2')">Год</div>
+        <div class="tab" onclick="toggleTab('tab3')">Автор</div>
+        <div class="tab" onclick="toggleTab('tab4')">Кооператив</div>
+        <div class="tab-content" id="content1">
+            <button class="tab-button" onclick="highlightButton(this)">Экшн</button>
+            <button class="tab-button" onclick="highlightButton(this)">Шутер</button>
+            <button class="tab-button" onclick="highlightButton(this)">Rpg</button>
+            <button class="tab-button" onclick="highlightButton(this)">Рогалик</button>
+            <button class="tab-button" onclick="highlightButton(this)">Приключение</button>
+            <!-- Добавьте другие жанры по аналогии -->
+        </div>
+        <div class="tab-content" id="content2">
+            <button class="tab-button" onclick="highlightButton(this)">2023</button>
+            <button class="tab-button" onclick="highlightButton(this)">2022</button>
+            <button class="tab-button" onclick="highlightButton(this)">2021</button>
+            <button class="tab-button" onclick="highlightButton(this)">2020</button>
+            <!-- Кнопки для выбора года -->
+        </div>
+        <div class="tab-content" id="content3">
+            <button class="tab-button" onclick="highlightButton(this)">Лавкрафт</button>
+            <button class="tab-button" onclick="highlightButton(this)">Vigil Games</button>
+            <button class="tab-button" onclick="highlightButton(this)">id Software</button>
+            <button class="tab-button" onclick="highlightButton(this)">Capcom</button>
+            <button class="tab-button" onclick="highlightButton(this)">Ninja Theory</button>
+            <button class="tab-button" onclick="highlightButton(this)">SURGE</button>
+            <button class="tab-button" onclick="highlightButton(this)">BottleRocket Entertainment</button>
+            <button class="tab-button" onclick="highlightButton(this)">CyberConnect2</button>
+            <!-- Кнопки для выбора автора -->
+        </div>
+        <div class="tab-content" id="content4">
+            <button class="tab-button" onclick="highlightButton(this)">Присутствует</button>
+            <button class="tab-button" onclick="highlightButton(this)">Отсутствует</button>
+            <!-- Кнопки для выбора кооперативности -->
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="middle-panel">
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Поиск...">
+        <button class="search-button" onclick="search()">
+        <img src="../galelery/search.png"alt="Поиск">
+        </button>
+    </div>
+    </div>
+    <div class="right-panel">
+    <div class="profile-avatar" onclick="goToProfile()">
+        <img src="../galelery/avatar.png"alt="Поиск">
+        <!-- Аватар пользователя -->
+    </div>
+    </div>
+</nav>
+    <div class="gallery">
+    <div class="photo" onclick="showPage(1)">
+    <img src="../galelery/games/Destiny 2.png" alt="Photo 1" onclick="window.open('#', '_self')">
+    </div>
+    <div class="photo" onclick="showPage(2)">
+    <img src="../galelery/games/GTA Online.png" alt="Photo 2" onclick="window.open('#', '_self')">
+    </div>
+    <div class="photo" onclick="showPage(3)">
+    <img src="../galelery/games/Minecraft.png" alt="Photo 3" onclick="window.open('#', '_self')">
+    </div>
+    <div class="photo" onclick="showPage(4)">
+    <img src="../galelery/games/Overwatch.png" alt="Photo 4" onclick="window.open('#', '_self')">
+    </div>
+</div>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="game-card">
+                <img src="../galelery/games/hel.png" alt="Game 1">
+            </div>
+            <div class="game-card">
+                <img src="../galelery/games/war.jpg" alt="Game 2">
+            </div>
+            <div class="game-card">
+                <img src="../galelery/games/ror2.jpg" alt="Game 3">
+            </div>
+            <div class="game-card">
+                <img src="../galelery/games/paragon.jpg" alt="Game 4">
+            </div>
+            <div class="game-card">
+                <img src="../galelery/games/gow.jpg" alt="Game 5">
+            </div>
+            <div class="game-card">
+                <img src="../galelery/games/Dota 2.png" alt="Game 6">
+            </div>
+            <div class="game-card">
+                <img src="../galelery/games/doom.png" alt="Game 7">
+            </div>
+            <div class="game-card">
+                <img src="../galelery/games/CSGO.png" alt="Game 8">
+            </div>
+            <div class="game-card">
+                <img src="../galelery/games/as.png" alt="Game 9">
+            </div>
+            <div class="game-card">
+                <img src="../galelery/games/as.png" alt="Game 9">
+            </div>
+        </div>
+    </div>
+    <div class="scroll-button">
+        <img src="../galelery/scrolli.png" alt="Scroll Icon">
+    </div>
+</div>
+<footer</footer>
+    <canvas style="position: fixed; width:100%; height: 200vh; z-index: -100;" width="1000px" height="600px" id="matrixBackground" ></canvas>
+<script src="script.js"></script>
+</body>
+</html>
