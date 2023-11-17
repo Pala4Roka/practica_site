@@ -70,27 +70,14 @@ function highlightButton(button) {
 button.classList.toggle('active-button');
 }
 
-function search() {
-  // Логика для поиска
+function redirectToPage1() {
+  window.location.href = '../regis/index.html'; // Замените '/page1' на адрес вашей первой страницы
 }
-function goToLoginPage() {
-  window.location.href = '../auto/index.html'; 
-}
-document.querySelector('form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Предотвращаем стандартное поведение формы (перезагрузка страницы)
 
-  const formData = new FormData(this); // Получаем данные из формы
-  fetch('save_data.php', {
-      method: 'POST',
-      body: formData
-  })
-  .then(response => response.text())
-  .then(data => {
-      console.log(data); // Полученный ответ от сервера
-      // Здесь можно добавить логику для обработки ответа от сервера
-  })
-  .catch(error => {
-      console.error('Ошибка:', error);
-  });
-});
+function redirectToPage2() {
+  window.location.href = '../auto/index.html'; // Замените '/page2' на адрес вашей второй страницы
+}
+function redirectToPage3() {
+  window.location.href = '../../main/index.html'; // Замените '/page2' на адрес вашей второй страницы
+}
 

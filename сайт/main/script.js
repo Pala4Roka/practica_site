@@ -1,3 +1,6 @@
+
+
+
 var c = document.getElementById("matrixBackground");
 var ctx = c.getContext("2d");
 
@@ -57,30 +60,59 @@ window.addEventListener("load",function() {
  function toggleMenu() {
   var menu = document.getElementById('menu');
   menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+  
 }
 
 function toggleTab(tabId) {
   var tab = document.getElementById(tabId);
   var content = document.getElementById('content' + tabId.slice(3));
   content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+
+  var allTabs = document.querySelectorAll('.tab');
+  allTabs.forEach(function(tab) {
+    tab.classList.remove('active-tab-red', 'active-tab-purple', 'active-tab-green', 'active-tab-crimson');
+  });
+
+
+  if (tabId === 'tab1') {
+    tab.classList.add('active-tab-red');
+  } else if (tabId === 'tab2') {
+    tab.classList.add('active-tab-purple');
+  } else if (tabId === 'tab3') {
+    tab.classList.add('active-tab-green');
+  } else if (tabId === 'tab4') {
+    tab.classList.add('active-tab-crimson');
+  }
 }
 
-function highlightButton(button) {
+
+
+function highlightButton(button, color) {
   button.classList.toggle('active-button');
+  if (color === 'red') {
+    button.classList.toggle('active-button-red');
+  } else if (color === 'purple') {
+    button.classList.toggle('active-button-purple');
+  } else if (color === 'green') {
+    button.classList.toggle('active-button-green');
+  } else if (color === 'white') {
+    button.classList.toggle('active-button-white');
+  }
 }
+
 
 function search() {
-  // Логика для поиска
+ 
 }
 
 function goToProfile() {
-    // Находим элемент с аватаром профиля
+  
 const profileAvatar = document.querySelector('.profile-avatar');
 
-// Добавляем обработчик события для клика по аватару профиля
+
 profileAvatar.addEventListener('click', function() {
-    // Перенаправляем на другую страницу при клике на аватар профиля
-    window.location.href = '../web/index.html';
+    
+    window.location.href = '../web/profile/index.html';
 });
 }
 document.addEventListener('DOMContentLoaded', function () {
@@ -89,15 +121,15 @@ document.addEventListener('DOMContentLoaded', function () {
   let currentIndex = 0;
 
   function updateCarousel() {
-      const translateValue = -currentIndex * 220; // Adjust the value based on card width and margin
+      const translateValue = -currentIndex * 220; 
       carouselInner.style.transform = `translateX(${translateValue}px)`;
   }
   scrollButton.addEventListener('wheel', function (event) {
       if (event.deltaY > 0) {
-          // Scroll down
+          
           currentIndex = Math.min(currentIndex + 1, document.querySelectorAll('.game-card').length - 3);
       } else {
-          // Scroll up
+          
           currentIndex = Math.max(currentIndex - 1, 0);
       }
 
@@ -123,3 +155,13 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 });
+function showText(element) {
+  const textElement = element.querySelector('.photo-text');
+  textElement.style.opacity = '1';
+}
+
+function hideText(element) {
+  const textElement = element.querySelector('.photo-text');
+  textElement.style.opacity = '0';
+}
+

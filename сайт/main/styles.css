@@ -8,7 +8,7 @@ body {
 }
 
 .empty-space {
-  height: 50px;
+  height: 20px;
 }
 
 nav {
@@ -20,14 +20,9 @@ nav {
   align-items: center;
 }
 
-/* Дополнительные стили для элементов навигационной панели */
 
-/* Стили для кнопок, меню и табов */
-/* Дополнительные стили для элементов навигационной панели */
-
-/* Стили для кнопок, меню и табов */
 .tab{
-  display: inline-flex; /* Изменение настройки отображения */
+  display: inline-flex; 
   background-color: #333;
   color: #fff;
   border: none;
@@ -38,12 +33,28 @@ nav {
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
+.active-tab-red {
+  background-color: red;
+}
+
+.active-tab-purple {
+  background-color: purple;
+}
+
+.active-tab-green {
+  background-color: green;
+}
+
+.active-tab-crimson {
+  background-color: darkred;
+}
+
 .tab:hover,
 .tab-button:hover {
   background-color: #444;
 }
 
-/* Остальные стили остаются неизменными */
+
 
 .dark-button,
 .tab {
@@ -65,7 +76,7 @@ nav {
 .menu {
   display: none;
   position: absolute;
-  top: 15%;
+  top: 9vw;
   left: 0;
   background-color: #333;
   border-radius: 5px;
@@ -97,10 +108,26 @@ z-index: 3;
 }
 
 .active-button {
-  background-color: #c0392b; /* Красный цвет для выделенных кнопок */
+  background-color: #c0392b; 
+}
+.active-button-red {
+  background-color: red; 
 }
 
-/* Стили для поисковой строки */
+.active-button-purple {
+  background-color: purple; 
+}
+
+.active-button-green {
+  background-color: green; 
+}
+
+.active-button-white {
+  background-color: rgb(124, 4, 4)8, 44, 44; 
+}
+
+
+
 .search-container {
   display: flex;
   align-items: center;
@@ -134,7 +161,7 @@ button.search-button:hover {
   width: 10%;
 }
 
-/* Стили для аватара профиля */
+
 .profile-avatar {
   width: 60px;
   height: 60px;
@@ -152,7 +179,7 @@ button.search-button:hover {
   width: 65%;
 }
 
-/* Медиа-запросы */
+
 @media screen and (max-width: 600px) {
   /* ... */
 }
@@ -161,16 +188,16 @@ button.search-button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15vh;
+    margin-top: 1vh;
     z-index: -1;
   }
 
   .photo {
     object-fit: cover; 
     position: relative;
-    display: inline-block; /* Строчно-блочный элемент */
-    overflow: hidden; /* Скрываем всё за контуром */
-    width: 300px;
+    display: inline-block; 
+    overflow: hidden; 
+    width: 170px;
     height: 300px;
     margin: 10px;
     transition: transform 0.3s;
@@ -181,7 +208,7 @@ button.search-button:hover {
   .photo img {
     width: 100%;
     height: 100%;
-    transition: 1s; /* Время эффекта */
+    transition: 1s; 
     display: block;
   }
 
@@ -200,35 +227,37 @@ button.search-button:hover {
 
   .carousel {
     overflow: hidden;
-    width: 100vw;
-    height: 50vh;
+    width: 100%;
+    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 250%;
 }
 
-/* Остальные стили остаются неизменными */
+
 
 .carousel-inner {
     display: flex;
     transition: transform 0.5s ease-in-out;
     overflow: hidden;
+    position: relative;
 }
 
-/* Остальные стили остаются неизменными */
+
 
 .game-card {
-    width: 200px;
-    height: 300px;
-    margin: 0 10px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 170px;
+  height: 280px;
+  margin: 0 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .card-inner {
@@ -270,17 +299,45 @@ button.search-button:hover {
 .game-card:hover {
     transform: scale(1.1);
 }
+.game-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
+.game-card:hover::before {
+  opacity: 1;
+}
+
+.game-card:hover::after {
+  content: '';
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  z-index: 1;
+}
 .scroll-button {
-    color: white;
-    width: 70px;
-    height: 70px;
-    position: sticky;
-    bottom: 0%;
-    left: 50%;
-    transform: translateX(-50%);
-    cursor: pointer;
-    border-radius: 25px;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  bottom: -2vw;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  border-radius: 25px;
 }
 .scroll-button:hover{
 box-shadow: 0px 0px 3px 5px white; 

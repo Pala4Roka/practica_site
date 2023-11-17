@@ -84,3 +84,56 @@ profileAvatar.addEventListener('click', function() {
 });
 
 }
+// Функция открытия модального окна
+function openModal() {
+  document.getElementById('editModal').style.display = 'block';
+}
+
+// Функция закрытия модального окна
+function closeModal() {
+  document.getElementById('editModal').style.display = 'none';
+}
+
+// Событие при клике на кнопку редактирования
+document.querySelector('.edit-button').addEventListener('click', function (event) {
+  event.preventDefault(); // Предотвращение действия по умолчанию, чтобы страница не перезагружалась
+
+  // Открытие модального окна при нажатии кнопки редактирования
+  openModal();
+});
+
+// Обработка отправки формы редактирования
+document.getElementById('editForm').addEventListener('submit', function (event) {
+  event.preventDefault(); // Предотвращение отправки формы и перезагрузки страницы
+  
+  // Получение значений из формы
+  const fullName = document.getElementById('fullName').value;
+  const nickname = document.getElementById('nickname').value;
+  const email = document.getElementById('email').value;
+
+  // Применение изменений (здесь можно отправить данные на сервер для сохранения)
+
+  // Закрытие модального окна после сохранения
+  closeModal();
+
+  // Здесь можно добавить логику для обновления страницы с новыми данными,
+  // либо обновить содержимое элементов на текущей странице с новыми значениями
+});
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+// Использование проверки при отправке формы
+document.getElementById('editForm').addEventListener('submit', function (event) {
+  event.preventDefault(); // Предотвращение отправки формы и перезагрузки страницы
+
+  const emailInput = document.getElementById('email').value;
+
+  if (!isValidEmail(emailInput)) {
+    alert('Пожалуйста, введите действительный адрес электронной почты.');
+    return;
+  }
+
+  // Остальная логика сохранения данных и закрытия модального окна
+});

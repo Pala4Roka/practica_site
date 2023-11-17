@@ -62,14 +62,15 @@
     </div>
     <div class="right-panel">
     <div class="profile-avatar" onclick="goToProfile()">
-        <img src="../../galelery/back.png"alt="Профиль">
+        <img src="../../galelery/logo.png"alt="Профиль">
         <!-- Аватар пользователя -->
     </div>
     </div>
 </nav>
 <div class="empty-space"></div>
+<div class="container">
 <div class="profile-container">
-    <div class="profile">
+    <div class="profile"><p> Аватарка профиля</p>
         <img src="../../galelery/avatar.png" alt="Profile Picture">
         <button class="upload-button">Загрузить</button>
         <input type="file" id="file-input">
@@ -101,12 +102,40 @@
                 <span>Пароль</span>
                 <span>********</span>
             </div>
-            <button class="edit-button">Редактировать</button>
+            <button class="edit-button" onclick="openModal()">Редактировать</button>
         </div>
+<div class="modal" id="editModal">
+    <div class="modal-content">
+    <form id="editForm">
+        <label for="fullName">ФИО:</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Введите ФИО" required><br>
+        <label for="nickname">Никнейм:</label>
+        <input type="text" id="nickname" name="nickname" placeholder="Введите никнейм" required><br>
+        <label for="email">Почта:</label>
+        <input type="email" id="email" name="email" placeholder="Введите почту" required><br>
+        <label for="phone">Телефон:</label>
+        <input type="number" id="phone" name="phone" placeholder="Введите телефон" required><br>
+        <label for="gens">Жанры:</label>
+            <select id="genre" name="genre">
+                <option value="action">Экшен</option>
+                <option value="coop">Кооператив</option>
+                <option value="roguelike">Рогалик</option>
+                <option value="rpg">Rpg</option>
+                <option value="card">Гонки</option>
+                <option value="simulation">Симуляторы</option>
+            </select>
+        <label for="password">Пароль:</label>
+        <input  type="password" id="password" name="password" placeholder="Введите пароль" required><br>
+        <button type="submit">Сохранить</button>
+        <button type="button" onclick="closeModal()">Отмена</button>
+    </form>
     </div>
-
+</div>
+</div>
+</div>
+</div>
 <footer</footer>
-    <canvas style="position: fixed; width:100%; height: 200vh; z-index: -100;" width="1000px" height="600px" id="matrixBackground" ></canvas>
+<canvas style="position: fixed; width:100%; height: 200vh; z-index: -100;" width="1000px" height="600px" id="matrixBackground" ></canvas>
 <script src="scrip.js"></script>
 </body>
 </html>

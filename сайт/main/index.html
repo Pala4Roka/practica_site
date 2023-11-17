@@ -14,40 +14,41 @@
     <div class="menu-container">
         <button class="dark-button" onclick="toggleMenu()">Фильтры</button>
         <div class="menu" id="menu">
-        <div class="tab" onclick="toggleTab('tab1')">Жанр</div>
-        <div class="tab" onclick="toggleTab('tab2')">Год</div>
-        <div class="tab" onclick="toggleTab('tab3')">Автор</div>
-        <div class="tab" onclick="toggleTab('tab4')">Кооператив</div>
+            <div class="tab" onclick="toggleTab('tab1')" id="tab1">Жанр</div>
+            <div class="tab" onclick="toggleTab('tab2')" id="tab2">Год</div>
+            <div class="tab" onclick="toggleTab('tab3')" id="tab3">Автор</div>
+            <div class="tab" onclick="toggleTab('tab4')" id="tab4">Кооператив</div>
+            
         <div class="tab-content" id="content1">
-            <button class="tab-button" onclick="highlightButton(this)">Экшн</button>
-            <button class="tab-button" onclick="highlightButton(this)">Шутер</button>
-            <button class="tab-button" onclick="highlightButton(this)">Rpg</button>
-            <button class="tab-button" onclick="highlightButton(this)">Рогалик</button>
-            <button class="tab-button" onclick="highlightButton(this)">Приключение</button>
-            <!-- Добавьте другие жанры по аналогии -->
+            <button class="tab-button" onclick="highlightButton(this , 'red')">Экшн</button>
+            <button class="tab-button" onclick="highlightButton(this , 'red')">Шутер</button>
+            <button class="tab-button" onclick="highlightButton(this , 'red')">Rpg</button>
+            <button class="tab-button" onclick="highlightButton(this , 'red')">Рогалик</button>
+            <button class="tab-button" onclick="highlightButton(this , 'red')">Приключение</button>
+            
         </div>
         <div class="tab-content" id="content2">
-            <button class="tab-button" onclick="highlightButton(this)">2023</button>
-            <button class="tab-button" onclick="highlightButton(this)">2022</button>
-            <button class="tab-button" onclick="highlightButton(this)">2021</button>
-            <button class="tab-button" onclick="highlightButton(this)">2020</button>
-            <!-- Кнопки для выбора года -->
+            <button class="tab-button" onclick="highlightButton(this , 'purple')">2023</button>
+            <button class="tab-button" onclick="highlightButton(this , 'purple')">2022</button>
+            <button class="tab-button" onclick="highlightButton(this , 'purple')">2021</button>
+            <button class="tab-button" onclick="highlightButton(this , 'purple')">2020</button>
+            
         </div>
         <div class="tab-content" id="content3">
-            <button class="tab-button" onclick="highlightButton(this)">Лавкрафт</button>
-            <button class="tab-button" onclick="highlightButton(this)">Vigil Games</button>
-            <button class="tab-button" onclick="highlightButton(this)">id Software</button>
-            <button class="tab-button" onclick="highlightButton(this)">Capcom</button>
-            <button class="tab-button" onclick="highlightButton(this)">Ninja Theory</button>
-            <button class="tab-button" onclick="highlightButton(this)">SURGE</button>
-            <button class="tab-button" onclick="highlightButton(this)">BottleRocket Entertainment</button>
-            <button class="tab-button" onclick="highlightButton(this)">CyberConnect2</button>
-            <!-- Кнопки для выбора автора -->
+            <button class="tab-button" onclick="highlightButton(this , 'green')">Лавкрафт</button>
+            <button class="tab-button" onclick="highlightButton(this , 'green')">Vigil Games</button>
+            <button class="tab-button" onclick="highlightButton(this , 'green')">id Software</button>
+            <button class="tab-button" onclick="highlightButton(this , 'green')">Capcom</button>
+            <button class="tab-button" onclick="highlightButton(this , 'green')">Ninja Theory</button>
+            <button class="tab-button" onclick="highlightButton(this , 'green')">SURGE</button>
+            <button class="tab-button" onclick="highlightButton(this , 'green')">BottleRocket Entertainment</button>
+            <button class="tab-button" onclick="highlightButton(this , 'green')">CyberConnect2</button>
+            
         </div>
         <div class="tab-content" id="content4">
-            <button class="tab-button" onclick="highlightButton(this)">Присутствует</button>
-            <button class="tab-button" onclick="highlightButton(this)">Отсутствует</button>
-            <!-- Кнопки для выбора кооперативности -->
+            <button class="tab-button" onclick="highlightButton(this , 'white')">Присутствует</button>
+            <button class="tab-button" onclick="highlightButton(this , 'white')">Отсутствует</button>
+            
         </div>
         </div>
     </div>
@@ -63,7 +64,7 @@
     <div class="right-panel">
     <div class="profile-avatar" onclick="goToProfile()">
         <img src="../galelery/avatar.png"alt="Поиск">
-        <!-- Аватар пользователя -->
+        
     </div>
     </div>
 </nav>
