@@ -1,0 +1,373 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  .empty-space {
+    height: 50px;
+  }
+  
+  nav {
+    width: auto;
+    background-color: #2c2c2c;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .tab{
+    display: inline-flex;
+    background-color: #333;
+    color: #383838;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .tab:hover,
+  .tab-button:hover {
+    background-color: #444;
+  }
+  
+  /* Остальные стили остаются неизменными */
+  
+  .dark-button,
+  .tab {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .dark-button:hover,
+  .tab:hover {
+    background-color: #444;
+  }
+  
+  .menu {
+    display: none;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  
+  }
+  
+  .tab-content {
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .tab-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  z-index: 3;
+  }
+  
+  
+  .tab-button:hover {
+    background-color: #777;
+  }
+  
+  .active-button {
+    background-color: #c0392b; /* Красный цвет для выделенных кнопок */
+  }
+  
+  /* Стили для поисковой строки */
+  .search-container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  #searchInput {
+    flex: 1;
+    padding: 10px;
+    margin-right: 20px;
+    border: none;
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  button.search-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  button.search-button:hover {
+    background-color: #777;
+  }
+  .search-button img{
+    width: 10%;
+  }
+  
+  /* Стили для аватара профиля */
+  .profile-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .profile-avatar:hover {
+    background-color: #777;
+  }
+  .profile-avatar img{
+    margin-top: 1%;
+    margin-left: 2%;
+    width: 100%;
+    border-radius: 25px;
+  }
+  
+  /* Медиа-запросы */
+  @media screen and (max-width: 600px) {
+    /* ... */
+  }
+  .profile-container {
+    width: 30%;
+    height: 40%;
+    background-color: #222222;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  /* Дополнительные стили по вашему усмотрению */
+}
+.profile {
+    text-align: center;
+    position: relative;
+}
+p{
+ color: white;
+}
+
+.profile img {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+}
+
+.upload-button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+    background-color: #660000;
+}
+
+input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+/* Остальные стили */
+
+.details-container {
+  color: white;
+    width: 60%;
+    height: 23vw;
+    background-color: #383838;
+    padding: 10px;
+    border: 2px solid #c0392b;
+    border-radius: 10px;
+    margin-left: auto; /* Размещение справа */
+    margin-right: 20px; /* Отступ от правого края */
+
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.details-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.editable {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #a0a0a0;
+    color: white;
+    cursor: pointer;
+}
+
+.editable:hover {
+    background-color: #555555;
+}
+
+.info-container {
+    width: 70%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 2px solid #8B0000; /* Контур бордового цвета */
+    border-radius: 10px;
+    margin-left: 20px; /* Отступ от левой части body */
+}
+
+.info-box {
+    width: 100%;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.edit-button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+    background-color: #2980b9;
+}
+/* Стили для модального окна */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #3a3a3a;
+  margin: 15% auto;
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  width: 70%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: calc(100% - 24px);
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.save-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: #45a049;
+}
+
+.cancel-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #d32f2f;
+}
