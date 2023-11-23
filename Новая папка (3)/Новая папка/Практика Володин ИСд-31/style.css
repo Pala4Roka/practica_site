@@ -1,0 +1,271 @@
+
+  header {
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .tur {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      color: #333;
+  }
+  .logo {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+  }
+  .menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu li {
+    margin-right: 20px;
+  }
+  .menu a {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  .menu a:hover {
+    color: #007bff;
+  }
+  #menu{
+    text-align: center;
+    justify-content: center;
+  }
+  .menu nav{
+   margin-bottom: 20px;
+   padding-left: 90px;
+   display: inline-block;
+  }
+  main {
+  padding: 20px;
+}
+.carousel {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: calc(100% * 4);
+  height: 100%;
+  transition: transform 0.5s;
+}
+
+.slide {
+  width: calc(100% / 4);
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev {
+  left: 0;
+  padding: 20px;
+}
+
+.next {
+  right: 0;
+  padding: 20px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-container form {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.search-container input[type=text] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  color: #333;
+}
+
+.search-container button[type=submit] {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.product {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+}
+
+.product h3 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.product p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.product button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.about-us {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.about-us h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.contact{
+ padding-top: 20px;
+ display: flex;
+ margin-left: 30px;
+
+}
+.contact1 img{
+  display: flex;
+  justify-content: left;
+}
+form {
+      line-height: 150%;
+      display: inline-block;
+      text-align: left;
+      background-color: grey;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px ;
+      height: 250px;
+      width: 300px;
+      margin-left: 70px;
+
+    }
+
+
+
+
+
+
+
+ .modal {
+  display: none; /* скрыт по умолчанию */
+  /* темный фон при открытии модалки должен быть на всю страницу */
+  position: fixed; 
+  z-index: 1; /* поверх всех элементов */
+  left: 0;
+  top: 0;
+  width: 100vw; /* полная ширина */
+  height: 100vh; /* полная высота */
+  background-color: rgba(0,0,0,0.4); /* цвет фона - прозрачный черный */
+}
+
+/* само модальное окно с контентом */
+.modal-content {
+  background-color: #fff;
+  /* окно будет находится по центру по горизонтали и с отступом сверху в 100 px */
+  margin: 100px auto; 
+  padding: 20px;
+  width: 50%; 
+  font-size: 20px;
+  /* разнесем текст и кнопоку по краям окна */
+  display: flex;
+  justify-content: space-between;
+ }
+
+span {
+  cursor: pointer;
+}
+.product2 button{
+  text-align: center;
+  background-color: grey;
+  color: white;
+  border:none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  width:100%;
+  cursor: pointer;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление тура</title>
+</head>
+
+<body>
+    <h1>Оформление тура</h1>
+    <form id="tour-form" action="submit_order.php" method="post">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="address">Почта:</label>
+        <input type="text" id="address" name="address" required><br>
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" required><br>
+
+        <input type="submit" value="Оформить тур">
+    </form>
+    <button><a href="index.html">Вернуться на главную</a></button>
+</body>
+
+</html>
+<style>
+    body {
+        background-image: url(glav.jpg);
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        text-align: center;
+        color: White;
+    }
+
+    form {
+        max-width: 450px;
+        margin: 0 auto;
+        background-color: grey;
+        padding: 55px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: black;
+    }
+
+    input[type="text"],
+    input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+<script>
+    const tourForm = document.getElementById('tour-form');
+    const cartItems = localStorage.getItem('cartItems');
+
+    tourForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const formData = new FormData(this);
+
+        // Сохраняем данные формы в localStorage
+        const data = {};
+        for (const [key, value] of formData.entries()) {
+            data[key] = value;
+        }
+        localStorage.setItem('userData', JSON.stringify(data));
+
+        // Перенаправляем на страницу личного кабинета
+        window.location.href = 'личный кабинет.html';
+    });
+
+    // Проверяем, есть ли выбранные туры, и выводим их
+    if (cartItems) {
+        const cartItemsList = JSON.parse(cartItems);
+        // Выводим информацию о турах на странице личного кабинета
+        console.log('Выбранные туры:', cartItemsList);
+    }
+</script>

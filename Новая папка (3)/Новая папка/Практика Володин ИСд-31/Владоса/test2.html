@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+</head>
+<body>
+    <h1>Оформление заказа</h1>
+    <form action="submit_order.php" method="post">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="address">Адрес доставки:</label>
+        <input type="text" id="address" name="address" required><br>
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" required><br>
+
+        <input type="submit" value="Отправить заказ">
+    </form>
+</body>
+</html>
+<style >
+    body {
+    background-image: url(glav.jpg);
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: White;
+}
+
+form {
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: grey;
+    padding: 55px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+
+input[type="text"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+</style>
